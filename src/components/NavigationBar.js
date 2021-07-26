@@ -1,5 +1,5 @@
-import { Navbar, Nav, Container, Button} from 'react-bootstrap';
-import {Link} from "react-router-dom";
+import { Navbar, Container, Button} from 'react-bootstrap';
+//import {Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -9,7 +9,7 @@ function NavigationBar() {
       <div>
     <Navbar variant="light">
   <Container>
-    <Navbar.Brand><img className="navbar__logo" src={process.env.PUBLIC_URL+"/assets/Netflix_Logo_CMYK.png"} /></Navbar.Brand>
+    <Navbar.Brand><img className="navbar__logo" alt="Netflix logo" src={process.env.PUBLIC_URL+"/assets/Netflix_Logo_CMYK.png"} /></Navbar.Brand>
     <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end nav__text">
       <Navbar.Text>

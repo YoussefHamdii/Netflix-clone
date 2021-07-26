@@ -20,11 +20,21 @@
 .home__banner{
   height:60%;
   background-color: white;
+  color: white;
+  .banner__name{
+    margin-top: 10%;
+    margin-left: 5%;
+    font-size: 5em;
+  }
+
+  .banner__overview{
+    max-width: 35%;
+    margin-left: 5%;
+  }
 }
 
 .navbar{
-  background: rgb(217,217,217);
-  background: linear-gradient(180deg, rgba(217,217,217,1) 0%, rgba(255,255,255,0) 50%, rgba(245,245,245,0) 100%);
+  background: linear-gradient(180deg, rgba(26, 25, 25, 0.767) 0%, rgba(0, 0, 0, 0) 50%, rgba(245,245,245,0) 100%);
   .navbar__logo{
     max-width: 15%;
     max-height: 15%;
