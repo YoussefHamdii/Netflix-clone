@@ -13,12 +13,12 @@
 }
 
 .home__container{
-  height: 1000px;
+  height: 100%;
   background-color: black;
 }
 
 .home__banner{
-  height:60%;
+  height:37em;
   background-color: white;
   color: white;
   .banner__name{
@@ -32,6 +32,13 @@
     margin-left: 5%;
   }
 }
+.banner__name{
+  z-index: 10;
+  margin-top: 20%;
+  margin-left: 5%;
+  font-size: 50px;
+  color: white;
+}
 
 .navbar{
   background: linear-gradient(180deg, rgba(26, 25, 25, 0.767) 0%, rgba(0, 0, 0, 0) 50%, rgba(245,245,245,0) 100%);
@@ -42,4 +49,24 @@
   .nav__text{
     width: 30%;
   }
+}
+
+.card{
+  margin-top: 2%;
+  margin-left: 1%;
+  height: 200px;
+  width: 400px;
+  flex: none;
+  max-width: 400px;
+}
+
+.trContainer{
+  display: flex;
+  overflow-x: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.trContainer::-webkit-scrollbar {
+  display: none;
 }
