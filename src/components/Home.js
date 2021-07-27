@@ -1,4 +1,5 @@
 import NavigationBar from './NavigationBar';
+import {Button} from 'react-bootstrap';
 import ShowRow from './ShowRow';
 import axios from 'axios';
 import Links from './Links';
@@ -12,7 +13,7 @@ function Home(){
 
    async function fetchData(){
         const banner =  await axios.get(Links.netflix);
-        setBanner(banner.data.results[1])
+        setBanner(banner.data.results[4]);
 
         const horror =  await axios.get(Links.horror);
         setHorror(horror.data.results);
@@ -25,7 +26,7 @@ function Home(){
     }
 
     useEffect(()=>
-            fetchData()
+            fetchData(),[]
     );
 
     return(
@@ -33,18 +34,31 @@ function Home(){
             <div className="home__banner" style={{
                 backgroundSize: "cover",
                 backgroundImage: `url("https://image.tmdb.org/t/p/original/${banner.backdrop_path}")`,
-                //backgroundPosition: "center center"
+                backgroundPosition: "center center"
             }}>
             <NavigationBar />
             <div className="banner__name">{banner.name}</div>
             <div className="banner__overview">{banner.overview}</div>
+            <div className="banner__button">
+            <Button variant="danger">PLAY</Button>
+            <Button className="second__button" variant="outline-light">+ MY LIST</Button>
             </div>
-            <h2>Horror Movies</h2>
+            </div>
+
+            <div className="homepage__partition">
+            <h4>Horror Movies</h4>
             <ShowRow data={horror}/>
-            <h2>Action Movies</h2>
+            </div>
+
+            <div className="homepage__partition">
+            <h4>Action Movies</h4>
             <ShowRow data={action}/>
-            <h2>Comedy Movies</h2>
+            </div>
+
+            <div className="homepage__partition">
+            <h4>Comedy Movies</h4>
             <ShowRow data={comedy}/>
+            </div>
         </div>
     )
 }
