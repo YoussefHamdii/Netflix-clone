@@ -50,21 +50,22 @@
 }
 .banner__name{
   z-index: 10;
-  margin-top: 20%;
+  margin-top: 35%;
   margin-left: 5%;
-  font-size: 50px;
+  font-size: 1.5em;
   color: white;
 }
 
 .navbar{
   background: linear-gradient(180deg, rgba(26, 25, 25, 0.767) 0%, rgba(0, 0, 0, 0) 50%, rgba(245,245,245,0) 100%);
-  .navbar__logo{
-    max-width: 15%;
-    max-height: 15%;
-  }
   .nav__text{
     width: 30%;
   }
+}
+
+.navbar__logo{
+  max-width: 20%;
+  max-height: 10%;
 }
 
 .card{
@@ -89,4 +90,44 @@
 
 .trContainer::-webkit-scrollbar {
   display: none;
+}
+
+.footer__container{
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #333333;
+  .footer{
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.padded{
+  padding-left: 100px;
+}
+.comedy{
+  margin-bottom: 25px;
+}
+
+.modal{
+  background-color: RGBA(2,4,0,0.16);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.modal .modal-content{
+  background-color: black;
+}
+.footer__logo{
+  margin: auto 0;
+  max-width: 25%;
+}
+
+.modal__img{
+  max-width: 100%;
+  
 }

@@ -3,6 +3,7 @@ import {Button} from 'react-bootstrap';
 import ShowRow from './ShowRow';
 import axios from 'axios';
 import Links from './Links';
+import Footer from './Footer';
 import { useEffect, useState } from 'react';
 
 function Home(){
@@ -13,7 +14,7 @@ function Home(){
 
    async function fetchData(){
         const banner =  await axios.get(Links.netflix);
-        setBanner(banner.data.results[4]);
+        setBanner(banner.data.results[1]);
 
         const horror =  await axios.get(Links.horror);
         setHorror(horror.data.results);
@@ -28,7 +29,7 @@ function Home(){
     useEffect(()=>
             fetchData(),[]
     );
-
+    console.log(banner);
     return(
         <div className="home__container">
             <div className="home__banner" style={{
@@ -55,10 +56,12 @@ function Home(){
             <ShowRow data={action}/>
             </div>
 
-            <div className="homepage__partition">
+            <div className="homepage__partition comedy">
             <h4>Comedy Movies</h4>
             <ShowRow data={comedy}/>
             </div>
+
+            <Footer />
         </div>
     )
 }
